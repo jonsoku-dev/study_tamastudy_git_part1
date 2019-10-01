@@ -4,13 +4,13 @@
 
 이종석
 
-감정한  Jeonghan Gam 
+감정한 Jeonghan Gam
 
 홍현지
 
 김동민
 
-이재웅
+이재웅 JaeWoong Lee
 
 윤성광
 
