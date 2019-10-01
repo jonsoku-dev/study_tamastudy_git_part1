@@ -1,9 +1,17 @@
 import React from 'react';
 
-const Operations = () => {
+const Operations = ({handleOperations}) => {
     return (
         <div>
-            this is Operation
+            <button onClick={() => handleOperations('+')}>+</button>
+            <button onClick={() => handleOperations('-')}>-</button>
+            <button onClick={() => handleOperations('*')}>*</button>
+            <button onClick={() => handleOperations('/')}>/</button>
+            <button onClick={() => handleOperations('ce')}>ce</button>
+            <button onClick={() => handleOperations('=')}>=</button>
+
+
+
         </div>
     )
 }

@@ -11,7 +11,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       numbers: '',
-      operations: ''
+      operations: '',
+      previous_num: ''
     };
   }
 
@@ -19,11 +20,61 @@ class App extends React.Component {
   //take in numbers for display
   handleNumbers = (number) => {
     var new_number = this.state.numbers + number;
-    console.log('got hiere');
-    console.log(new_number);
     this.setState({
       numbers: new_number
     });
+  }
+
+  //this is to handle operation
+  handleOperations = (operation) => {
+    if(operation === 'ce'){
+      this.setState({
+        numbers: '',
+        operations: '',
+        pervious_num: ''
+      });
+    }
+    else if(operation === '='){
+      //here actual computation
+      if(this.state.operations==='+'){
+        console.log('got here');
+        console.log(parseFloat(this.state.previous_num));
+        this.setState({
+          numbers: (parseFloat(this.state.previous_num) + parseFloat(this.state.numbers)).toString(),
+          operations: '',
+          previous_num: ''
+        });
+      }
+      else if(this.state.operations ==='-'){
+        this.setState({
+          numbers: (parseFloat(this.state.previous_num) - parseFloat(this.state.numbers)).toString(),
+          operations: '',
+          previous_num: ''
+        });
+      }
+      else if(this.state.operations ==='*'){
+        this.setState({
+          numbers: (parseFloat(this.state.previous_num) * parseFloat(this.state.numbers)).toString(),
+          operations: '',
+          previous_num: ''
+        });
+      }
+      else{
+        this.setState({
+          numbers: (parseFloat(this.state.previous_num) / parseFloat(this.state.numbers)).toString(),
+          operations: '',
+          previous_num: ''
+        });
+      }
+      //after computation numbers should be the result
+    }
+    else{
+      this.setState({
+        previous_num: this.state.numbers,
+        operations: operation,
+        numbers: ''
+      });
+    }
   }
 
   render() {
@@ -48,7 +99,7 @@ class App extends React.Component {
           {this.state.numbers}
           
           <Numbers handleButton={this.handleNumbers}/>
-          <Operations />
+          <Operations handleOperations={this.handleOperations}/>
         </body>
       </div>
     );
