@@ -37,8 +37,6 @@ class App extends React.Component {
     else if(operation === '='){
       //here actual computation
       if(this.state.operations==='+'){
-        console.log('got here');
-        console.log(parseFloat(this.state.previous_num));
         this.setState({
           numbers: (parseFloat(this.state.previous_num) + parseFloat(this.state.numbers)).toString(),
           operations: '',
