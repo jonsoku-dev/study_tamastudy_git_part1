@@ -2,7 +2,7 @@
 
 > [노션 깃헙정리자료](https://www.notion.so/Git-ec10d8d1770648ce904be22d4a81bb01)
 
-이종석
+이종석 LEEJONGSEOK
 
 감정한 Jeonghan Gam
 
