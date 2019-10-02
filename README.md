@@ -6,7 +6,7 @@
 
 감정한 Jeonghan Gam
 
-홍현지
+홍현지 Hyeonji Hong
 
 김동민
 
