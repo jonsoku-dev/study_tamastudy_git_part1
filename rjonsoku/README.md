@@ -1,1 +1,0 @@
-# tamastudy_calculator
