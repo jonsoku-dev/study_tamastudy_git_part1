@@ -18,6 +18,6 @@
 
 정재훈 Jeong JaeHun
 
-조상우
+조상우 Sangwoo Cho swcho
 
 최준열
