@@ -6,6 +6,9 @@ const Main = () => {
   const [result, setResult] = useState(0);
 
   const handleNumber = num => {
+    if (value.length === 0 && num === '0') {
+      return null;
+    }
     setValue([...value, num]);
   };
 
