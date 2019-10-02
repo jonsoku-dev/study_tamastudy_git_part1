@@ -84,7 +84,7 @@ const NumberWrapper = styled.div`
     }
 
     &:nth-of-type(10) {
-      grid-column: 1 / -1;
+      grid-column: 1 / 3;
     }
     transition: all 0.2s ease;
     &:hover {
@@ -96,7 +96,7 @@ const NumberWrapper = styled.div`
 
 const MainPresenter = ({ value, result, handleNumber, handleCal, handleReset }) => {
   const renderNumber = () => {
-    const Number = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+    const Number = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
     // const Number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
     Number.sort((a, b) => {
       return b - a;
@@ -122,11 +122,15 @@ const MainPresenter = ({ value, result, handleNumber, handleCal, handleReset }) 
     );
   };
 
+  const renderValue = () => {
+    return value.map((v, i) => <span key={i}>{v}</span>);
+  };
+
   console.log(value);
 
   return (
     <MainContainer>
-      <FormulaWrapper>{value.length === 0 ? '입력해주세요' : value}</FormulaWrapper>
+      <FormulaWrapper>{value.length === 0 ? '입력해주세요' : renderValue()}</FormulaWrapper>
       <ResultWrapper>{result}</ResultWrapper>
       <FunctionWrapper>{renderFunction()}</FunctionWrapper>
       <NumberWrapper>{renderNumber()}</NumberWrapper>
