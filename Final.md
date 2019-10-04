@@ -10,7 +10,7 @@
 
 - [ ] 이재웅 JaeWoong Lee
 
-- [ ] 이주연 Juyeon Lee
+- [x] 이주연 Juyeon Lee
 
 - [ ] 정재훈 Jeong JaeHun
 
