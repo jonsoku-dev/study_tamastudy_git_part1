@@ -67,11 +67,22 @@ class App extends React.Component {
       //after computation numbers should be the result
     }
     else{
-      this.setState({
-        previous_num: this.state.numbers,
-        operations: operation,
-        numbers: ''
-      });
+      if(this.state.operations !== ''){
+        //if this state is not equal to any operations then keep doing the operations
+        var actual_previous_num = eval(this.state.previous_num + this.state.operations + this.state.numbers);
+        this.setState({
+          previous_num: actual_previous_num.toString(),
+          operations:operation,
+          numbers: ''
+        });
+      }
+      else{
+        this.setState({
+          previous_num: this.state.numbers,
+          operations: operation,
+          numbers: ''
+        });
+      }
     }
   }
 

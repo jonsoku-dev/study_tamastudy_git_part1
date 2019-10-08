@@ -1,0 +1,20 @@
+.first {
+  color: white;
+  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+
+.second {
+  color: white;
+  padding: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.third {
+  color: white;
+  padding: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}

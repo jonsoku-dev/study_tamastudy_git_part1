@@ -9,6 +9,9 @@ const Operations = ({handleOperations}) => {
             <button onClick={() => handleOperations('/')}>/</button>
             <button onClick={() => handleOperations('ce')}>ce</button>
             <button onClick={() => handleOperations('=')}>=</button>
+            <button onClick={() => handleOperations('(')}>(</button>
+            <button onClick={() => handleOperations(')')}>)</button>
+
 
 
 
