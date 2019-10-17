@@ -67,31 +67,29 @@ class App extends React.Component {
       //after computation numbers should be the result
     }
     else{
-      this.setState({
-        previous_num: this.state.numbers,
-        operations: operation,
-        numbers: ''
-      });
+      if(this.state.operations !== ''){
+        //if this state is not equal to any operations then keep doing the operations
+        var actual_previous_num = eval(this.state.previous_num + this.state.operations + this.state.numbers);
+        this.setState({
+          previous_num: actual_previous_num.toString(),
+          operations:operation,
+          numbers: ''
+        });
+      }
+      else{
+        this.setState({
+          previous_num: this.state.numbers,
+          operations: operation,
+          numbers: ''
+        });
+      }
     }
   }
 
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        
         <body>
           
           {this.state.numbers}
