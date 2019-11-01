@@ -4526,6 +4526,13 @@ hmac-drbg@^1.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
+holidayapi@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/holidayapi/-/holidayapi-2.1.0.tgz#4a121dd21a5d68031c110ea9ff47d4b799be448c"
+  integrity sha512-f2k/0AmpH4UVcalr7HuonVbKpyGLUM9GrYEoBFmzmQ9n/Z0/8YOebamn8s1InjbmTueZISo8qKsTLOJGhI43Aw==
+  dependencies:
+    node-fetch "^2.6.0"
+
 hosted-git-info@^2.1.4:
   version "2.8.4"
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.4.tgz#44119abaf4bc64692a16ace34700fed9c03e2546"
@@ -6398,6 +6405,11 @@ no-case@^2.2.0:
   integrity sha512-rmTZ9kz+f3rCvK2TD1Ue/oZlns7OGoIWP4fc3llxxRXlOkHKoWPPWJOfFYpITabSow43QJbRIoHQXtt10VldyQ==
   dependencies:
     lower-case "^1.1.1"
+
+node-fetch@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
+  integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
 
 node-forge@0.9.0:
   version "0.9.0"
